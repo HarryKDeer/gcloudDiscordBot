@@ -23,6 +23,7 @@ async def on_message(message):
   elif content == "$start":
     print("Server requested to start")
     await message.channel.send("Server will be starting momentarily\nThis takes around half a minute")
+    os.system("./startServer.sh") #Doesn't need to be a script. Alternatively you can have 'gcloud compute instances start Server-Name`
   elif content == "$status":
     print("Getting status of Minecraft server")
     await message.channel.send("Fetching status of server\nThis might take a moment")
